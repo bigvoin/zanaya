@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { createZodDto } from 'nestjs-zod';
 import { ApiProperty } from '@nestjs/swagger';
 
 export const SendMessageSchema = z.object({
@@ -7,7 +6,7 @@ export const SendMessageSchema = z.object({
   content: z.string().min(1).max(1000),
 });
 
-export class SendMessageDto extends createZodDto(SendMessageSchema) {
+export class SendMessageDto {
   @ApiProperty()
   recipientId: string;
 

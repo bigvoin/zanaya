@@ -35,7 +35,7 @@ export class PointsController {
   }
 
   @UseGuards(JwtAuthGuard, RolesGuard)
-  @Roles(Role.teacher, Role.parent, Role.leader)
+  @Roles(Role.teacher, Role.parent, Role.leader, Role.student)
   @ApiBearerAuth()
   @Get('student/:id')
   @ApiOkResponse({ type: [PointsDto] })

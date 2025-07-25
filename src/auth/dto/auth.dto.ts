@@ -23,7 +23,7 @@ export class SignupDto {
   @ApiProperty({ example: 'Doe' })
   lastName: string;
 
-  @ApiProperty({ example: Role.leader, enum: Role })
+  @ApiProperty({ enum: Role, example: Role.student })
   role: Role;
 }
 
